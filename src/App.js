@@ -1,12 +1,14 @@
 import "./App.css";
 import React, { useState } from "react";
+import image from "./workingMe.png";
 
 function App() {
   const [show, setShow] = useState(false);
 
   return (
     <div className="main">
-      <button onClick={() => setShow(true)}>Cliquez-ici</button>
+      <button onClick={() => setShow(!show)}>Cliquez-ici</button>
+      {show && <img src={image} alt="woman in front of computer" />}
     </div>
   );
 }
