@@ -1,15 +1,15 @@
 import "./App.css";
-import React, { useState } from "react";
-import image from "./workingMe.png";
+import { Router, Routes, Route } from "react-router-dom";
+
+import Alice from "./Alice";
 
 function App() {
-  const [show, setShow] = useState(false);
-
   return (
-    <div className="main">
-      <button onClick={() => setShow(!show)}>Cliquez-ici</button>
-      {show && <img src={image} alt="woman in front of computer" />}
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" exact element={<Alice />} />
+      </Routes>
+    </Router>
   );
 }
 
